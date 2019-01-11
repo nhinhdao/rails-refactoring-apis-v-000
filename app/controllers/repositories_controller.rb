@@ -2,7 +2,6 @@ class RepositoriesController < ApplicationController
   def index
     response = GithubService.new({"access_token": session[:token]})
     @repos_array = response.get_repos
-    byebug
   end
 
   def create
